@@ -3,10 +3,17 @@ version: '3'
 services:
     brevets:
         build: brevets/.
-        command: python3 flask_brevets.py
+        command: python flask_brevets.py
+        tty: true
         ports: 
           - "5001:5000"
         depends_on:
-          - redis
-    redis:
-      image: redis
+          - mongo
+        environment:
+          MONGODB_HOSTNAME: 'mongo'
+        volumes:
+          - type: bind
+            source: brevets/
+            target: /app
+    mongo:
+      image: mongo:5.0.5

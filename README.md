@@ -1,3 +1,11 @@
+Creator: Joseph Mock
+Contact: jmock1881@gmail.com
+Description:
+A flask app capable of calculating brevet minimum and maximum times of admission, storing that data and fetching the most recent values
+
+
+
+
 # UOCIS322 - Project 5 #
 Brevet time calculator with MongoDB!
 
